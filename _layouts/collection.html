@@ -1,0 +1,21 @@
+<!doctype html>
+
+	<head>
+	</head>
+
+	<body>
+		{% for item in site.collections %}
+		  <article>
+		    <h2>
+		      <a href="{{ post.url }}">
+		        {{ item.title }}
+		      </a>
+		    </h2>
+		    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ item.date | date_to_long_string }}</time>
+		    {{ item.content }}
+		  </article>
+		{% endfor %}
+
+	</body>
+
+</html>
